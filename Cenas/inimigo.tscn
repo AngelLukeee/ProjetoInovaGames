@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=3 uid="uid://bnuiwqfp6e42s"]
+
+[ext_resource type="Texture2D" uid="uid://bjx42cmy62v1i" path="res://Assets Players/Asset Packs 1-5/Asset Packs 1-4 (final)/Asset Pack-V1/Player Run/player run 48x48.png" id="1_la1l3"]
+[ext_resource type="Script" path="res://Script/inimigo.gd" id="2_vyskg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b86w5"]
+atlas = ExtResource("1_la1l3")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0iupb"]
+atlas = ExtResource("1_la1l3")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1b4gc"]
+atlas = ExtResource("1_la1l3")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycn0o"]
+atlas = ExtResource("1_la1l3")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5778b"]
+atlas = ExtResource("1_la1l3")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ik265"]
+atlas = ExtResource("1_la1l3")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6oor"]
+atlas = ExtResource("1_la1l3")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8iuy3"]
+atlas = ExtResource("1_la1l3")
+region = Rect2(336, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nal51"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b86w5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0iupb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1b4gc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycn0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5778b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ik265")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6oor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8iuy3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="Inimigo" type="AnimatedSprite2D"]
+position = Vector2(1, -16)
+sprite_frames = SubResource("SpriteFrames_nal51")
+animation = &"idle"
+script = ExtResource("2_vyskg")
+
+[connection signal="editor_description_changed" from="." to="." method="_on_editor_description_changed"]
